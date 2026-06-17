@@ -6,6 +6,7 @@ body {
   line-height: 1.6;
 }
 
+/* Header with UTA background image */
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("uta-aerial-shot.webp");
   background-size: cover;
@@ -16,16 +17,18 @@ body {
 }
 
 .hero h1 {
-  font-size: 52px;
-  margin-bottom: 15px;
+  font-size: 54px;
+  margin: 0 0 15px 0;
+  letter-spacing: 1px;
 }
 
 .hero p {
-  font-size: 22px;
-  max-width: 850px;
+  font-size: 23px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
+/* Real page tabs */
 .tabs {
   display: flex;
   justify-content: center;
@@ -36,8 +39,8 @@ body {
 .tabs a {
   color: white;
   text-decoration: none;
-  padding: 16px 28px;
-  font-size: 19px;
+  padding: 16px 34px;
+  font-size: 20px;
   border-left: 1px solid #374151;
   border-right: 1px solid #374151;
 }
@@ -52,6 +55,7 @@ body {
   font-weight: bold;
 }
 
+/* Main page layout */
 main {
   max-width: 1100px;
   margin: 35px auto;
@@ -61,7 +65,7 @@ main {
 section {
   background-color: white;
   margin-bottom: 30px;
-  padding: 35px;
+  padding: 38px;
   border-radius: 12px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
@@ -75,8 +79,9 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 25px;
   color: #1f2937;
+  margin-bottom: 8px;
 }
 
 p,
@@ -84,10 +89,116 @@ li {
   font-size: 19px;
 }
 
+ul {
+  padding-left: 28px;
+}
+
+/* People cards */
+.people {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.person {
+  background-color: #f9fafb;
+  padding: 24px;
+  border-left: 5px solid #374151;
+  border-radius: 8px;
+}
+
+/* Research/software cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #f9fafb;
+  padding: 24px;
+  border-left: 5px solid #374151;
+  border-radius: 8px;
+}
+
+/* GitHub/software button */
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #1f2937;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.button:hover {
+  background-color: #374151;
+}
+
+/* Links */
+a {
+  color: #1f2937;
+}
+
+/* Code blocks */
+pre {
+  background-color: #111827;
+  color: white;
+  padding: 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 17px;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Footer */
 footer {
   text-align: center;
   background-color: #111827;
   color: white;
   padding: 22px;
   margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 17px;
+}
+
+/* Mobile-friendly layout */
+@media screen and (max-width: 700px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tabs a {
+    text-align: center;
+    padding: 14px;
+  }
+
+  .hero {
+    padding: 85px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 19px;
+  }
+
+  section {
+    padding: 25px;
+  }
+
+  .people,
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
