@@ -1,19 +1,17 @@
 body {
   margin: 0;
   font-family: "Times New Roman", Times, serif;
-  background-color: #f4f4f4;
+  background-color: white;
   color: #222;
   line-height: 1.6;
 }
 
-/* Header with UTA background image */
+/* Header background changed back to dark color */
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("uta-aerial-shot.webp");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(to right, #1f2937, #374151);
   color: white;
   text-align: center;
-  padding: 120px 20px;
+  padding: 90px 20px;
 }
 
 .hero h1 {
@@ -28,7 +26,7 @@ body {
   margin: 0 auto;
 }
 
-/* Real page tabs */
+/* Top tabs */
 .tabs {
   display: flex;
   justify-content: center;
@@ -57,17 +55,18 @@ body {
 
 /* Main page layout */
 main {
-  max-width: 1100px;
-  margin: 35px auto;
-  padding: 0 20px;
+  max-width: 1050px;
+  margin: 40px auto;
+  padding: 0 25px;
 }
 
+/* Sections are no longer boxed */
 section {
-  background-color: white;
-  margin-bottom: 30px;
-  padding: 38px;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 42px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 h2 {
@@ -93,32 +92,32 @@ ul {
   padding-left: 28px;
 }
 
-/* People cards */
+/* People section */
 .people {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 25px;
 }
 
 .person {
-  background-color: #f9fafb;
-  padding: 24px;
-  border-left: 5px solid #374151;
-  border-radius: 8px;
+  padding: 0;
+  background: none;
+  border-left: none;
+  border-radius: 0;
 }
 
-/* Research/software cards */
+/* Research/software cards without rectangular boxes */
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 30px;
 }
 
 .card {
-  background-color: #f9fafb;
-  padding: 24px;
-  border-left: 5px solid #374151;
-  border-radius: 8px;
+  padding: 0;
+  background: none;
+  border-left: none;
+  border-radius: 0;
 }
 
 /* GitHub/software button */
@@ -182,7 +181,7 @@ footer p {
   }
 
   .hero {
-    padding: 85px 20px;
+    padding: 75px 20px;
   }
 
   .hero h1 {
@@ -193,8 +192,8 @@ footer p {
     font-size: 19px;
   }
 
-  section {
-    padding: 25px;
+  main {
+    padding: 0 20px;
   }
 
   .people,
