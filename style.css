@@ -106,7 +106,7 @@ ul {
 
 .profile-photo img {
   width: 320px;
-  height: auto;
+  height: 320px;
   border-radius: 12px;
   display: block;
 }
