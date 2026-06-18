@@ -6,32 +6,15 @@ body {
   line-height: 1.6;
 }
 
-/* Header background changed back to dark color */
-.hero {
-  background: linear-gradient(to right, #1f2937, #374151);
-  color: white;
-  text-align: center;
-  padding: 90px 20px;
-}
-
-.hero h1 {
-  font-size: 54px;
-  margin: 0 0 15px 0;
-  letter-spacing: 1px;
-}
-
-.hero p {
-  font-size: 23px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Top tabs */
+/* Tabs at the very top */
 .tabs {
   display: flex;
   justify-content: center;
   background-color: #111827;
   border-bottom: 4px solid #374151;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .tabs a {
@@ -53,16 +36,36 @@ body {
   font-weight: bold;
 }
 
-/* Main page layout */
+/* Header */
+.hero {
+  background: linear-gradient(to right, #1f2937, #374151);
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: 54px;
+  margin: 0 0 15px 0;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 23px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Page layout */
 main {
-  max-width: 1050px;
+  max-width: 1100px;
   margin: 40px auto;
   padding: 0 25px;
 }
 
-/* Sections are no longer boxed */
+/* No rectangular boxes around sections */
 section {
-  margin-bottom: 42px;
+  margin-bottom: 55px;
   padding: 0;
   background: none;
   border-radius: 0;
@@ -70,7 +73,7 @@ section {
 }
 
 h2 {
-  font-size: 34px;
+  font-size: 36px;
   color: #111827;
   border-bottom: 2px solid #d1d5db;
   padding-bottom: 8px;
@@ -78,9 +81,9 @@ h2 {
 }
 
 h3 {
-  font-size: 25px;
-  color: #1f2937;
-  margin-bottom: 8px;
+  font-size: 34px;
+  color: #111827;
+  margin: 0 0 10px 0;
 }
 
 p,
@@ -92,35 +95,51 @@ ul {
   padding-left: 28px;
 }
 
-/* People section */
-.people {
+/* People profile layout */
+.profile-card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  grid-template-columns: 320px 1fr;
+  gap: 50px;
+  align-items: start;
+  margin-top: 25px;
 }
 
-.person {
-  padding: 0;
-  background: none;
-  border-left: none;
-  border-radius: 0;
+.profile-photo img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
 }
 
-/* Research/software cards without rectangular boxes */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+.profile-info {
+  padding-top: 10px;
 }
 
-.card {
-  padding: 0;
-  background: none;
-  border-left: none;
-  border-radius: 0;
+.profile-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-/* GitHub/software button */
+/* Clickable more-info section */
+details {
+  margin-top: 22px;
+  font-size: 19px;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+summary:hover {
+  text-decoration: underline;
+}
+
+/* Button */
 .button {
   display: inline-block;
   margin-top: 15px;
@@ -169,8 +188,8 @@ footer p {
   font-size: 17px;
 }
 
-/* Mobile-friendly layout */
-@media screen and (max-width: 700px) {
+/* Mobile layout */
+@media screen and (max-width: 800px) {
   .tabs {
     flex-direction: column;
   }
@@ -196,8 +215,13 @@ footer p {
     padding: 0 20px;
   }
 
-  .people,
-  .cards {
+  .profile-card {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .profile-photo img {
+    width: 100%;
+    max-width: 320px;
   }
 }
